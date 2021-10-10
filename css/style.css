@@ -1,0 +1,172 @@
+:root 
+{
+  --primary-color: rgba(0, 0, 0, 0.9);
+}
+
+* 
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body 
+{
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.4;
+}
+
+.container 
+{
+  max-width: 1900px;
+  margin: auto;
+  overflow: hidden;
+  
+}
+
+.showcase 
+{
+  height: 100vh;
+  position: relative;
+}
+
+.showcase:before 
+{
+  content: '';
+  background: url('../img/volcano.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.showcase .showcase-container 
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.menu_nav
+{
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  padding-top: 50px;
+  padding-left: 200px;
+}
+
+.menu_nav ul
+{
+  list-style: none;
+  display: flex;
+  justify-content: space-around; 
+}
+
+.menu_nav ul li
+{
+  padding: 1.2rem 1.2rem;
+  width: 104px;
+  height: 34px;
+}
+
+.menu_nav ul li a:hover
+{
+  background: var(--primary-color);
+  background-size: 100px 24px;
+  color: #fff;
+  transition: opacity 1s ease-in-out;
+  border-radius: 20px;
+  padding: 10px 10px;
+}
+
+.menu_nav ul li a
+{
+  text-decoration: none;
+  color: #000;
+}
+
+.logo
+{
+  width: 104px;
+  height: 31px;
+}
+
+.btn 
+{
+  display: inline-block;
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 20px 1rem;
+  margin-top: 65vh;
+  transition: opacity 1s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 30px;
+  width: 300px;
+  height: 60px;
+}
+
+.btn:hover 
+{
+  opacity: 0.7;
+}
+
+.leftAside
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 126px;  
+  position: absolute;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 2;
+  color: #000;
+}
+
+.leftAside_90
+{
+  display: inline;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+}
+
+.leftAside_90 .bold
+{  
+  font-weight: bold;
+}
+
+.case
+{
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  width: 39px;
+  height: 35px;
+  z-index: 3;
+  align-self: auto;
+}
+
+@media (max-width: 800px) 
+{
+  .menu_nav
+  {
+    display: none;
+  }
+  .menu-wrap
+  {
+    display: block;
+  }
+}
